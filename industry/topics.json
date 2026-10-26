@@ -1,0 +1,307 @@
+{
+  "exportedAt": "2026-09-29",
+  "groups": [
+    {
+      "key": "company",
+      "name": "公司与项目",
+      "blurb": "按厂商与核心项目追踪：谁发了版本、谁的云又挂了"
+    },
+    {
+      "key": "field",
+      "name": "技术方向",
+      "blurb": "按技术领域深挖：容器、可观测性、IaC、平台工程……"
+    },
+    {
+      "key": "genre",
+      "name": "内容形态",
+      "blurb": "按内容类型浏览：版本、漏洞、故障复盘、教程……"
+    }
+  ],
+  "topics": [
+    {
+      "slug": "kubernetes",
+      "name": "Kubernetes",
+      "group": "company",
+      "entityId": "kubernetes",
+      "tags": ["Kubernetes", "entity:kubernetes"],
+      "definition": "Kubernetes 的大版本发布、KEP 进展、生态工具与最佳实践的持续追踪。",
+      "related": ["containers", "cncf", "releases"]
+    },
+    {
+      "slug": "docker",
+      "name": "Docker / 容器运行时",
+      "group": "company",
+      "entityId": "docker",
+      "tags": ["Docker", "entity:docker"],
+      "definition": "Docker、containerd、Podman 等容器运行时与镜像生态的动态。",
+      "related": ["containers", "kubernetes", "releases"]
+    },
+    {
+      "slug": "hashicorp",
+      "name": "HashiCorp / Terraform",
+      "group": "company",
+      "entityId": "hashicorp",
+      "tags": ["HashiCorp", "entity:hashicorp"],
+      "definition": "Terraform、Vault、Consul、Nomad 与 OpenTofu 的版本、许可与生态动态。",
+      "related": ["iac", "releases", "industry"]
+    },
+    {
+      "slug": "grafana-labs",
+      "name": "Grafana / Prometheus",
+      "group": "company",
+      "entityId": "grafana-labs",
+      "tags": ["Grafana", "Prometheus", "entity:grafana-labs"],
+      "definition": "Grafana、Prometheus、Loki、Tempo、Mimir 与可观测性生态的动态。",
+      "related": ["observability", "releases"]
+    },
+    {
+      "slug": "redhat",
+      "name": "Red Hat / RHEL",
+      "group": "company",
+      "entityId": "redhat",
+      "tags": ["Red Hat", "entity:redhat"],
+      "definition": "RHEL、OpenShift、Ansible 与 Fedora 生态的版本和安全动态。",
+      "related": ["linux", "automation", "releases"]
+    },
+    {
+      "slug": "canonical",
+      "name": "Canonical / Ubuntu",
+      "group": "company",
+      "entityId": "canonical",
+      "tags": ["entity:canonical"],
+      "definition": "Ubuntu LTS 节奏、内核更新与服务器版动态。",
+      "related": ["linux", "releases"]
+    },
+    {
+      "slug": "cncf",
+      "name": "CNCF 云原生",
+      "group": "company",
+      "entityId": "cncf",
+      "tags": ["CNCF", "entity:cncf"],
+      "definition": "CNCF 项目毕业、孵化、存档与云原生生态全景的变化。",
+      "related": ["kubernetes", "containers", "industry"]
+    },
+    {
+      "slug": "aws",
+      "name": "AWS",
+      "group": "company",
+      "entityId": "aws",
+      "tags": ["AWS", "entity:aws"],
+      "definition": "AWS 的服务发布、区域故障、定价调整与运维相关更新。",
+      "related": ["cloud", "incidents", "releases"]
+    },
+    {
+      "slug": "azure",
+      "name": "Microsoft Azure",
+      "group": "company",
+      "entityId": "azure",
+      "tags": ["entity:azure"],
+      "definition": "Azure 的服务发布、区域故障与企业混合云动态。",
+      "related": ["cloud", "incidents", "releases"]
+    },
+    {
+      "slug": "google-cloud",
+      "name": "Google Cloud",
+      "group": "company",
+      "entityId": "google-cloud",
+      "tags": ["entity:google-cloud"],
+      "definition": "Google Cloud 的服务发布、区域故障与 SRE 文化内容。",
+      "related": ["cloud", "incidents", "releases"]
+    },
+    {
+      "slug": "aliyun",
+      "name": "阿里云",
+      "group": "company",
+      "entityId": "aliyun",
+      "tags": ["entity:aliyun"],
+      "definition": "阿里云的服务动态、ACK 容器服务与国内云运维实践。",
+      "related": ["cloud", "tencent-cloud", "releases"]
+    },
+    {
+      "slug": "tencent-cloud",
+      "name": "腾讯云",
+      "group": "company",
+      "entityId": "tencent-cloud",
+      "tags": ["entity:tencent-cloud"],
+      "definition": "腾讯云的服务动态、TKE 与云加社区实践。",
+      "related": ["cloud", "aliyun", "releases"]
+    },
+    {
+      "slug": "huawei-cloud",
+      "name": "华为云 / openEuler",
+      "group": "company",
+      "entityId": "huawei-cloud",
+      "tags": ["entity:huawei-cloud"],
+      "definition": "华为云、CCE 容器引擎与 openEuler 生态动态。",
+      "related": ["cloud", "linux", "releases"]
+    },
+    {
+      "slug": "containers",
+      "name": "容器与运行时",
+      "group": "field",
+      "tags": ["容器/运行时"],
+      "definition": "容器技术的一切：运行时、镜像、安全加固与硬ening 生态。",
+      "related": ["kubernetes", "security", "linux"]
+    },
+    {
+      "slug": "cicd",
+      "name": "CI/CD 与 GitOps",
+      "group": "field",
+      "tags": ["CI/CD"],
+      "definition": "发布流水线与渐进式交付：GitHub Actions、GitLab CI、Argo CD、Flux 的动态与实践。",
+      "related": ["platform", "automation"]
+    },
+    {
+      "slug": "iac",
+      "name": "基础设施即代码",
+      "group": "field",
+      "tags": ["IaC"],
+      "definition": "Terraform、OpenTofu、Pulumi、Ansible 的版本、方法与配置漂移治理。",
+      "related": ["automation", "hashicorp"]
+    },
+    {
+      "slug": "observability",
+      "name": "可观测性",
+      "group": "field",
+      "tags": ["可观测性"],
+      "definition": "指标、日志、链路与 OpenTelemetry：监控体系的建设方法和工具更新。",
+      "related": ["grafana-labs", "aiops"]
+    },
+    {
+      "slug": "cloud",
+      "name": "云平台",
+      "group": "field",
+      "tags": ["云平台"],
+      "definition": "公有云、混合云与边缘云的服务、定价与架构动态。",
+      "related": ["aws", "azure", "google-cloud"]
+    },
+    {
+      "slug": "linux",
+      "name": "Linux 与系统",
+      "group": "field",
+      "tags": ["Linux"],
+      "definition": "内核、发行版、systemd 与底层系统技术的运维向动态。",
+      "related": ["containers", "security"]
+    },
+    {
+      "slug": "network",
+      "name": "网络",
+      "group": "field",
+      "tags": ["网络"],
+      "definition": "负载均衡、DNS、服务网格与数据中心网络的运维实践。",
+      "related": ["containers", "kubernetes"]
+    },
+    {
+      "slug": "storage-db",
+      "name": "存储与数据库",
+      "group": "field",
+      "tags": ["存储", "数据库"],
+      "definition": "块存储、对象存储、Redis、Kafka、MySQL、PostgreSQL 的运维动态。",
+      "related": ["releases", "incidents"]
+    },
+    {
+      "slug": "security",
+      "name": "安全加固",
+      "group": "field",
+      "tags": ["安全加固"],
+      "definition": "面向基础设施的安全：高危漏洞、加固基准、供应链安全与密钥管理。",
+      "related": ["vulnerabilities", "linux"]
+    },
+    {
+      "slug": "automation",
+      "name": "自动化",
+      "group": "field",
+      "tags": ["自动化"],
+      "definition": "把重复劳动交给脚本和工具：Ansible、Shell、批处理与自动修复。",
+      "related": ["iac", "aiops"]
+    },
+    {
+      "slug": "aiops",
+      "name": "AIOps 智能运维",
+      "group": "field",
+      "tags": ["AIOps"],
+      "definition": "AI 落地运维：告警降噪、异常检测、根因定位与大模型辅助值班。",
+      "related": ["observability", "automation"]
+    },
+    {
+      "slug": "platform",
+      "name": "平台工程",
+      "group": "field",
+      "tags": ["平台工程"],
+      "definition": "内部开发者平台、Backstage 与 DevEx 的建设思路和行业讨论。",
+      "related": ["cicd", "opinions"]
+    },
+    {
+      "slug": "chaos",
+      "name": "混沌工程",
+      "group": "field",
+      "tags": ["混沌工程"],
+      "definition": "故障注入、弹性验证与 Chaos Mesh、ChaosBlade 等工具的实践。",
+      "related": ["incidents", "containers"]
+    },
+    {
+      "slug": "releases",
+      "name": "版本发布",
+      "group": "genre",
+      "tags": ["版本发布"],
+      "definition": "核心项目和系统的大版本、LTS 与重要更新的第一时间记录。",
+      "related": ["vulnerabilities", "tutorials"]
+    },
+    {
+      "slug": "vulnerabilities",
+      "name": "漏洞与安全",
+      "group": "genre",
+      "tags": ["漏洞/安全"],
+      "definition": "影响运维的高危 CVE、补丁与供应链安全事件的持续记录。",
+      "related": ["releases", "security"]
+    },
+    {
+      "slug": "incidents",
+      "name": "故障与复盘",
+      "group": "genre",
+      "tags": ["故障/复盘"],
+      "definition": "宕机事件、根因分析与 postmortem——别人踩的坑，就是你省下的事故。",
+      "related": ["cloud", "chaos"]
+    },
+    {
+      "slug": "tutorials",
+      "name": "教程实践",
+      "group": "genre",
+      "tags": ["教程/实践", "工具/配置"],
+      "definition": "拿来就能用的实操内容：配置片段、排障思路、runbook 与架构方案。",
+      "related": ["releases", "benchmarks"]
+    },
+    {
+      "slug": "benchmarks",
+      "name": "评测基准",
+      "group": "genre",
+      "tags": ["评测/基准"],
+      "definition": "工具到底谁强：性能测试、横向对比与选型参考。",
+      "related": ["tutorials", "releases"]
+    },
+    {
+      "slug": "opinions",
+      "name": "观点评论",
+      "group": "genre",
+      "tags": ["观点/评论"],
+      "definition": "运维圈的人在想什么：SRE 文化、职业发展、工具论战与趋势判断。",
+      "related": ["trends", "platform"]
+    },
+    {
+      "slug": "trends",
+      "name": "现象与趋势",
+      "group": "genre",
+      "tags": ["现象/趋势"],
+      "definition": "正在发生的变化：技术栈迁移、岗位演变与行业格局的观察。",
+      "related": ["opinions", "industry"]
+    },
+    {
+      "slug": "industry",
+      "name": "行业动态",
+      "group": "genre",
+      "tags": ["行业动态"],
+      "definition": "商业脉搏：收购、许可证变更、项目存档、定价与政策信号。",
+      "related": ["trends", "hashicorp"]
+    }
+  ]
+}
