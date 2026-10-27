@@ -32,7 +32,11 @@
 # 1. 准备：Node.js ≥24、Docker、一个 OpenAI 兼容的 LLM API Key
 node scripts/init-env.ts --llm-key <你的Key>
 
-# 2. 检查 .env 里的 SITE_URL / LLM_* 配置
+# 注意：脚本会自动生成全部随机密钥和管理员密码，并把管理员密码【打印一次】
+# （也写在 .env 的 ADMIN_PASSWORD 里），请当场记下，否则只能进 .env 查看。
+
+# 2. 把 .env 里的 SITE_URL 改成服务器实际地址（默认是 localhost）
+#    并核对 LLM_BASE_URL / LLM_MODEL 与你的服务商匹配
 
 # 3. 构建并启动（国内网络建议带 npm 镜像参数）
 docker compose build --build-arg NPM_REGISTRY=https://registry.npmmirror.com
@@ -147,10 +151,14 @@ LLM_EXTRA_JSON={"thinking":{"type":"disabled"}}
 # LLM_MODEL=glm-4.5-air
 ```
 
-> 也可以用项目自带脚本一键生成（会自动填充随机密钥）：
+> 也可以用项目自带脚本一键生成（随机密钥和管理员密码全部自动生成，管理员密码会**打印一次**，请记下）：
 > ```bash
 > node scripts/init-env.ts --llm-key <你的Key>
 > ```
+> 生成后仍需手动把 `SITE_URL` 从 `localhost` 改成服务器实际地址。
+>
+> ⚠️ 如果这四项没填有效值，`api` 容器会拒绝启动并无限重启（日志报
+> `Refusing to start in production`），表现为首页 503、/admin 500——这是最常见的部署翻车点。
 
 **常用可选项**：
 
@@ -298,6 +306,18 @@ docker compose build --build-arg NPM_REGISTRY=https://registry.npmmirror.com
 docker compose up -d        # setup 会自动补跑新迁移
 ```
 
+## LLM 服务中断后补处理积压
+
+LLM 欠费、限流、换服务商导致文章积压的，服务恢复（改好 `.env` 并 `up -d`）后跑一次：
+
+```bash
+# 只补处理没有模型分析记录的文章（receipts 机制保证重复跑不会重复计费）
+docker compose exec -T worker node scripts/enqueue-analysis.ts
+
+# 全量重跑所有文章（慎用）
+docker compose exec -T worker node scripts/enqueue-analysis.ts --all
+```
+
 ---
 
 # 常见问题（FAQ）
@@ -312,7 +332,13 @@ LLM 服务商按分钟限流（qpm）触顶。处理：到服务商控制台提�
 内存不足。按第 1 步加 swap 后重新 build。
 
 **Q: 精选文章详情页只有导读没有正文？**
-这是版权安全设计：每个信源默认 `site_fulltext: false`，只显示中文导读 + 原文链接。在后台 `/admin` → 信源管理中给想展示全文的信源打开开关，保存后系统自动重新发布该信源全部文章。微信公众号等转载敏感来源建议保持关闭。
+全文展示由每个信源的 `site_fulltext` 开关决定（版权考虑）。官方博客类信源（K8s/CNCF/Docker/AWS/Red Hat 等 15 个）在 `industry/sources.json` 里已默认开启；媒体聚合源（The New Stack、The Register、Phoronix、OSCHINA、LWN、HN 等）保持只显示导读。可在后台 `/admin` → 信源管理里随时开关，改后系统自动重新发布该信源全部文章。注意：开关打开还要**正文抓取成功**才会显示全文（`body_status=ok`）。
+
+**Q: 换了 LLM key 还是全挂，日志大量 `HTTP 403: ERROR: ACCESS DENIED`（HTML 页面）？**
+这不是 key 的问题——返回 HTML 拦截页说明是中转站/网关的 WAF 封了你**服务器的 IP**（NAT VPS 的 IP 段常被风控）。验证方法：把同样的 curl 在本机电脑上跑一遍，本机通、服务器不通就是 IP 被封。处理：换服务商，或找服务商解封 IP。`ping` 通不代表能调 API，拦截发生在应用层。
+
+**Q: LLM 恢复后之前积压的文章会自动处理吗？**
+不会自动补，需要跑一次 `docker compose exec -T worker node scripts/enqueue-analysis.ts`（见"日常运维"一节）。
 
 **Q: 只有 `docker-compose`（v1）命令，`docker compose` 提示不存在？**
 v1 可以运行本项目，但重建容器会遇到 `KeyError: 'ContainerConfig'`，用上文"改配置后重启"里的绕过命令；建议安装 Compose v2。
