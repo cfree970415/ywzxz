@@ -7,15 +7,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://kubernetes.io/blog/feed.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "kubernetes",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["官方"],
-      "site_fulltext": false,
+      "tags": [
+        "官方"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -24,15 +28,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.cncf.io/blog/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "cncf",
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["官方", "云原生"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "云原生"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -41,15 +50,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.docker.com/blog/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "docker",
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["官方", "容器"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "容器"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -58,15 +72,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.hashicorp.com/feed.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "hashicorp",
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["官方", "IaC"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "IaC"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -75,15 +94,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://prometheus.io/blog/feed.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "grafana-labs",
       "participation_mode": "editorial",
       "interval_minutes": 240,
-      "tags": ["官方", "可观测性"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "可观测性"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -92,15 +116,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://grafana.com/blog/feed.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "grafana-labs",
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["官方", "可观测性"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "可观测性"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -109,15 +138,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.ansible.com/blog/feed.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "redhat",
       "participation_mode": "editorial",
       "interval_minutes": 240,
-      "tags": ["官方", "自动化"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "自动化"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -126,15 +160,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://github.blog/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "github",
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["官方", "CI/CD"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "CI/CD"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -143,14 +182,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://lwn.net/headlines/rss",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 240,
-      "tags": ["官方", "Linux", "内核"],
+      "tags": [
+        "官方",
+        "Linux",
+        "内核"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -160,15 +205,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://aws.amazon.com/blogs/aws/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "aws",
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["官方", "云平台"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "云平台"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -177,15 +227,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://cloud.google.com/blog/rss/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "google-cloud",
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["官方", "云平台"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "云平台"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -194,15 +249,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://azure.microsoft.com/en-us/blog/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "azure",
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["官方", "云平台"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "云平台"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -211,15 +271,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.redhat.com/en/rss/blog",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "redhat",
       "participation_mode": "editorial",
       "interval_minutes": 240,
-      "tags": ["官方", "Linux"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "Linux"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -228,15 +293,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://ubuntu.com/blog/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "canonical",
       "participation_mode": "editorial",
       "interval_minutes": 240,
-      "tags": ["官方", "Linux"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "Linux"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -245,15 +315,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://tech.meituan.com/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 240,
-      "tags": ["官方", "国内大厂"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "国内大厂"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -262,14 +337,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://thenewstack.io/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体"],
+      "tags": [
+        "媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -279,14 +358,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://devops.com/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["媒体"],
+      "tags": [
+        "媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -296,14 +379,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.theregister.com/Headlines.rss",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体"],
+      "tags": [
+        "媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -313,14 +400,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.phoronix.com/rss.php",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["媒体", "Linux"],
+      "tags": [
+        "媒体",
+        "Linux"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -330,15 +422,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://netflixtechblog.medium.com/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": true,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 240,
-      "tags": ["官方", "工程实践"],
-      "site_fulltext": false,
+      "tags": [
+        "官方",
+        "工程实践"
+      ],
+      "site_fulltext": true,
       "syndicate_fulltext": false
     },
     {
@@ -347,14 +444,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.oschina.net/news/rss",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体", "中文"],
+      "tags": [
+        "媒体",
+        "中文"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -364,14 +466,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://hnrss.org/newest?q=kubernetes&points=30",
-        "_aihot": { "initialBackfillLimit": 5 }
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["社区"],
+      "tags": [
+        "社区"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -381,14 +487,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://hnrss.org/newest?q=devops+OR+sre+OR+kubernetes+OR+terraform&points=50",
-        "_aihot": { "initialBackfillLimit": 5 }
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["社区"],
+      "tags": [
+        "社区"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     }
